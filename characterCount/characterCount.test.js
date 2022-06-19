@@ -3,15 +3,9 @@ import {characterCount} from './characterCount.js';
 
 describe('Test Suite for character count function', ()=>{
   it('Should return how many time a character appears in a string', (done)=>{
-    const result = characterCount('python');
-    const expectedOutput = {
-      p: 1,
-      y: 1,
-      t: 1,
-      h: 1,
-      o: 1,
-      n: 1,
-    };
+    const result = characterCount('programming');
+    const expectedOutput =
+      {'p': 1, 'r': 2, 'o': 1, 'g': 2, 'a': 1, 'm': 2, 'i': 1, 'n': 1};
     expect(JSON.stringify(result)).to.be.equals(JSON.stringify(expectedOutput));
     done();
   });
