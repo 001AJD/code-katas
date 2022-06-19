@@ -1,0 +1,28 @@
+{
+    "name": "code-katas",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "mocha **/*.test.js --exit",
+        "lint": "eslint ./**/*.js "
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/001AJD/code-katas.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/001AJD/code-katas/issues"
+    },
+    "homepage": "https://github.com/001AJD/code-katas#readme",
+    "devDependencies": {
+        "chai": "^4.3.6",
+        "eslint": "^8.18.0",
+        "eslint-config-google": "^0.14.0",
+        "mocha": "^9.2.2"
+    }
+}
