@@ -5,25 +5,23 @@ output: [1, 2, 3, 4, 5]
 */
 
 const getUniqueElements = (numberArray) => {
-  if(!Array.isArray(numberArray))
-  {
+  if (!Array.isArray(numberArray)) {
     return 'invalid input, expected array';
   }
-  let uniqueElements = [];
+  const uniqueElements = [];
   numberArray.map((elem)=>{
-    if(!uniqueElements.includes(elem))
-    {
+    if (!uniqueElements.includes(elem)) {
       uniqueElements.push(elem);
     }
   });
-  return uniqueElements
+  return uniqueElements;
 };
 
 const uniqueElementsFilterMethod = (numberArray) => {
   let uniqueElements = [];
   uniqueElements = numberArray.filter((item,
-    index) => numberArray.indexOf(item) === index);
-  return uniqueElements
+      index) => numberArray.indexOf(item) === index);
+  return uniqueElements;
 };
 
-export { getUniqueElements };
+export {getUniqueElements};

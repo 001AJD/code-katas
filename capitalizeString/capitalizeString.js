@@ -2,19 +2,18 @@
 
 const capitalizeString = (myString) => {
   console.log(typeof(myString));
-  if(typeof(myString) !== 'string')
-  {
+  if (typeof(myString) !== 'string') {
     return 'invalid input, expected string';
   }
-  let myStrArray = myString.split(' ');
+  const myStrArray = myString.split(' ');
   let result = '';
   myStrArray.forEach((elem, index) => {
-    let upperCaseLetter = elem.charAt(0).toUpperCase();
-    let temp = elem.slice(1);
-    myStrArray[index] = upperCaseLetter+temp
+    const upperCaseLetter = elem.charAt(0).toUpperCase();
+    const temp = elem.slice(1);
+    myStrArray[index] = upperCaseLetter+temp;
   });
   result = myStrArray.toString();
   result = result.replace(',', ' ');
   return result;
 };
-export { capitalizeString };
+export {capitalizeString};
