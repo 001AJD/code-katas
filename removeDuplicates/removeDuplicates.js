@@ -4,7 +4,11 @@ uniqueElements([1, 2, 3, 4, 3, 2, 1, 5]);
 output: [1, 2, 3, 4, 5]
 */
 
-const uniqueElements = (numberArray) => {
+const getUniqueElements = (numberArray) => {
+  if(!Array.isArray(numberArray))
+  {
+    return 'invalid input, expected array';
+  }
   let uniqueElements = [];
   numberArray.map((elem)=>{
     if(!uniqueElements.includes(elem))
@@ -15,8 +19,6 @@ const uniqueElements = (numberArray) => {
   return uniqueElements
 };
 
-console.log(uniqueElements([1, 2, 3, 4, 3, 2, 1, 5]));
-
 const uniqueElementsFilterMethod = (numberArray) => {
   let uniqueElements = [];
   uniqueElements = numberArray.filter((item,
@@ -24,4 +26,4 @@ const uniqueElementsFilterMethod = (numberArray) => {
   return uniqueElements
 };
 
-console.log(uniqueElementsFilterMethod(uniqueElementsFilterMethod([1, 2, 3, 4, 3, 2, 1, 5])));
+export { getUniqueElements };
