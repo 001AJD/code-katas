@@ -1,14 +1,20 @@
 /* Write a function called 'capitalizeWords' that takes in a string and returns the string with the first letter of each word capitalized. */
 
 const capitalizeString = (myString) => {
+  console.log(typeof(myString));
+  if(typeof(myString) !== 'string')
+  {
+    return 'invalid input, expected string';
+  }
   let myStrArray = myString.split(' ');
+  let result = '';
   myStrArray.forEach((elem, index) => {
     let upperCaseLetter = elem.charAt(0).toUpperCase();
-    console.log(upperCaseLetter);
     let temp = elem.slice(1);
     myStrArray[index] = upperCaseLetter+temp
   });
-  return myStrArray.toString();
+  result = myStrArray.toString();
+  result = result.replace(',', ' ');
+  return result;
 };
-
-console.log(capitalizeString("hello world"));
+export { capitalizeString };
