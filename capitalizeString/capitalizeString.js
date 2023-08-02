@@ -1,7 +1,6 @@
 /* Write a function called 'capitalizeWords' that takes in a string and returns the string with the first letter of each word capitalized. */
 
 const capitalizeString = (myString) => {
-  console.log(typeof(myString));
   if (typeof(myString) !== 'string') {
     return 'invalid input, expected string';
   }
