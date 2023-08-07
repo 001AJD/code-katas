@@ -1,4 +1,7 @@
 const linearSearch = (arr, searchElement) => {
+  if (!Array.isArray(arr)) {
+    return 'invalid input';
+  }
   // return -1 if search element is not present in the given array
   let result = -1;
   const arrLength = arr.length;
