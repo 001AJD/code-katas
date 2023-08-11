@@ -7,7 +7,6 @@ const getUniqueCombinations = (arr) => {
   /*
     formula for unique pairs excluding itself
     (number of elements in array)^2 - number of elements in array
-    9-3
   */
   const uniqueCombinations = (arr.length * arr.length) - arr.length;
   return uniqueCombinations;
@@ -20,7 +19,6 @@ const getCombinations = (arr) => {
     for (let j = i+1; j < arr.length; j++) {
       resultArr.push(arr[i]);
       resultArr.push(arr[j]);
-      console.log(arr[i]+', '+arr[j]);
     }
   }
   return resultArr;
