@@ -23,6 +23,10 @@ const merge = (leftArr, rightArr) => {
       rightIndex++;
     }
   }
+  console.log('leftIndex ==> '+leftIndex);
+  console.log('leftArr ==> '+leftArr);
+  console.log('rightIndex ==> '+rightIndex);
+  console.log('rightArr ==> '+rightArr);
   return result.concat(leftArr.slice(leftIndex)).concat(rightArr.slice(rightIndex));
 };
 
